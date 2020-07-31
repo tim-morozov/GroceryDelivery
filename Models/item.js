@@ -6,14 +6,10 @@ const ItemSchema = new Schema({
         type: String,
         required: true
     },
-    price: {
-        type: Number,
-        required: true
-    },
-    stock: {
-        type: Number,
-        required: true
+    date: {
+        type: Date,
+        default: Date.now
     }
 });
 
-module.exports = Item = mongoose.Schema('item', ItemSchema);
+module.exports = Item = mongoose.model('item', ItemSchema);
